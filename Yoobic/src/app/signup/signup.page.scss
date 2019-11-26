@@ -1,0 +1,62 @@
+.sign_in {
+    font-size: xx-large;
+    font-weight: 300;
+}
+
+.email {
+    width: 2rem;
+}
+
+ion-content {
+    --ion-background-color: rgb(220, 229, 233) !important;
+}
+
+.item {
+    margin: auto;
+    margin-top: 1.4rem;
+    width: 60%;
+}
+
+.email {
+    font-size: small;
+}
+
+.password {
+    font-size: small;
+}
+
+.anchor_wrapper {
+    margin-left: 40%;
+}
+
+.forgot {
+    text-decoration: none;
+    font-size: small;
+    color: var(--ion-color-medium-tint)
+}
+
+.button_wrapper {
+    margin-top: 1rem;
+}
+
+ion-footer {
+    background-color: rgb(223, 231, 233)
+}
+
+.footer_text {
+    color: var(--ion-color-medium-tint);
+    text-decoration: underline;
+    font-size: small;
+}
+
+.signup_button {
+    margin-right: 1rem;
+}
+
+.signin_button {
+    margin-left: 1rem;
+}
+
+ion-list {
+    margin-bottom: 0;
+}
