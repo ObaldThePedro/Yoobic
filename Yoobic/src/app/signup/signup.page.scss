@@ -1,6 +1,5 @@
 .sign_in {
-    font-size: xx-large;
-    font-weight: 300;
+    font-size: 4vh;
 }
 
 .email {
@@ -8,13 +7,13 @@
 }
 
 ion-content {
-    --ion-background-color: rgb(220, 229, 233) !important;
+    --ion-background-color: rgb(212, 222, 226) !important;
 }
 
 .item {
     margin: auto;
     margin-top: 1.4rem;
-    width: 60%;
+    width: 80%;
 }
 
 .email {
@@ -40,7 +39,7 @@ ion-content {
 }
 
 ion-footer {
-    background-color: rgb(223, 231, 233)
+    background-color: rgb(212, 222, 226)
 }
 
 .footer_text {

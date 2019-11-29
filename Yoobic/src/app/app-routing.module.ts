@@ -7,6 +7,15 @@ const routes: Routes = [
     path: "signup",
     loadChildren: () =>
       import("./signup/signup.module").then(m => m.SignupPageModule)
+  },
+  {
+    path: "menu",
+    loadChildren: () => import("./menu/menu.module").then(m => m.MenuPageModule)
+  },
+  {
+    path: "missions",
+    loadChildren: () =>
+      import("./missions/missions.module").then(m => m.MissionsPageModule)
   }
 ];
 

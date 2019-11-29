@@ -1,0 +1,35 @@
+// .active-item {
+//     border-left: 8px solid var(--icon-color-primary)
+// }
+
+ion-menu {
+
+    --ion-background-color: rgb(212, 222, 226);
+
+    ion-toolbar {
+        --background: rgb(212, 222, 226);
+        margin-top: 5rem;
+    }
+
+    ion-list {
+        /* optional, but it needs when you use gradient as a background color.*/
+        background: transparent;
+    }
+
+    ion-item {
+        margin-top: 1rem;
+    }
+
+    .ion-icon {
+        color: rgba(107, 107, 107, 0.753)
+    }
+
+    ion-row {
+        margin-left: 5vh;
+        display: flex;
+        align-items: center;
+    }
+
+
+
+}
