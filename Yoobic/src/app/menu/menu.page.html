@@ -9,11 +9,11 @@
 
     <ion-content padding>
       <ion-grid>
-        <ion-menu-toggle autohide="false" *ngFor="let p of pages">
+        <ion-menu-toggle *ngFor="let p of pages">
           <ion-row>
             <ion-item lines="none" [routerLink]="p.url" routerDirection="root"
               [class.active-item]="selectedPath === p.url">
-              <ion-icon class="ion-icon" style="zoom: 1.3" name="image"></ion-icon>
+              <ion-icon class="ion-icon" style="zoom: 1.0" name="image"></ion-icon>
               <p style="margin-left: 1rem;">{{p.title}}</p>
             </ion-item>
           </ion-row>

@@ -10,6 +10,20 @@ ion-content {
     --ion-background-color: rgb(212, 222, 226) !important;
 }
 
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+    padding: 0px;
+}
+
+.wrapper {
+    display: grid;
+}
+
 .item {
     margin: auto;
     margin-top: 1.4rem;
@@ -34,10 +48,6 @@ ion-content {
     color: var(--ion-color-medium-tint)
 }
 
-.button_wrapper {
-    margin-top: 1rem;
-}
-
 ion-footer {
     background-color: rgb(212, 222, 226)
 }
@@ -54,8 +64,4 @@ ion-footer {
 
 .signin_button {
     margin-left: 1rem;
-}
-
-ion-list {
-    margin-bottom: 0;
 }
