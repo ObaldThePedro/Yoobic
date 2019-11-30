@@ -8,9 +8,9 @@ import { Router, RouterEvent } from "@angular/router";
 })
 export class MenuPage implements OnInit {
   pages = [
-    { title: "Missions", url: "menu/missions" },
-    { title: "Photos", url: "menu/photos" },
-    { title: "Details", url: "menu/details" }
+    { title: "Movies", url: "/menu/missions" },
+    { title: "Characters", url: "menu/photos" },
+    { title: "Planets", url: "menu/details" }
   ];
 
   selectedPath = "";

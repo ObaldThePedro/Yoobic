@@ -30,17 +30,13 @@
     </ion-row>
   </ion-grid>
 
-  <ion-grid>
+  <ion-grid text-center>
     <ion-card *ngFor="let item of films" [routerLink]="['/menu', 'movie', item.episode_id]"
       routerLinkActive="router-link-active">
-      <img src="download.jpeg" />
-      <ion-card-header>
-        <ion-card-subtitle>Movie</ion-card-subtitle>
+      <img src="https://pngriver.com/wp-content/uploads/2018/04/Download-Star-Wars-Logo-PNG.png" />
+      <ion-card-header style="padding-top: 0">
         <ion-card-title>{{item.title}}</ion-card-title>
       </ion-card-header>
-      <!-- <ion-card-content>
-        {{item.opening_crawl}}
-      </ion-card-content> -->
     </ion-card>
   </ion-grid>
 </ion-content>

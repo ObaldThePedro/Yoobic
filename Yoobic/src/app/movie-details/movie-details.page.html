@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>movieDetails</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <p style="font-weight: bold;" text-center>
+      {{details?.title}}
+    </p>
+    <ion-icon slot="end" style="zoom: 1.7; transform: rotate(90deg)" name="options"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <p>Director: {{details?.director}}</p>
+  <ion-grid text-center>
+    <p style="font-weight: bold">Director </p>
+    <p>{{details?.director}}</p>
+    <p style="font-weight: bold">Producer </p>
+    <p>{{details?.producer}}</p>
+    <p style="font-weight: bold">Summary</p>
+    <p>{{details?.opening_crawl}}</p>
+  </ion-grid>
 </ion-content>
