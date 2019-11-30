@@ -11,6 +11,11 @@ const routes: Routes = [
       {
         path: "missions",
         loadChildren: "../missions/missions.module#MissionsPageModule"
+      },
+      {
+        path: "movie/:id",
+        loadChildren:
+          "../movie-details/movie-details.module#MovieDetailsPageModule"
       }
     ]
   }

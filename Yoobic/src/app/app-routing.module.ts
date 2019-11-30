@@ -16,6 +16,13 @@ const routes: Routes = [
     path: "missions",
     loadChildren: () =>
       import("./missions/missions.module").then(m => m.MissionsPageModule)
+  },
+  {
+    path: "movie/:id",
+    loadChildren: () =>
+      import("./movie-details/movie-details.module").then(
+        m => m.MovieDetailsPageModule
+      )
   }
 ];
 

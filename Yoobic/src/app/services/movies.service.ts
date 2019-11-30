@@ -1,24 +1,21 @@
 import { Injectable } from "@angular/core";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-
-export enum SearchType {
-  all = "",
-  movie = "movie",
-  series = "series",
-  episode = "episode"
-}
+import { map } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root"
 })
 export class MoviesService {
-  url = "http://www.omdbapi.com/";
-  apiKey = "77585c0d";
+  url = "https://swapi.co/api/films/";
 
-  constructor(private http: HttpClientModule) {}
+  constructor(private http: HttpClient) {}
 
-  searchData(title: string, type = SearchType): Observable<any> {
-    return;
+  getData(): Observable<any> {
+    return this.http.get(this.url).pipe(map(films => films));
+  }
+
+  getDetails(id) {
+    return this.http.get(this.url + `${id}`);
   }
 }

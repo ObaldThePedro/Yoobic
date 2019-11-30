@@ -1,24 +1,29 @@
+import { MoviesService } from "../services/movies.service";
 import { Component, OnInit } from "@angular/core";
-import { Router, RouterEvent } from "@angular/router";
+import { Observable } from "rxjs";
 
 @Component({
-  selector: "app-missions",
+  selector: "app-movies",
   templateUrl: "./missions.page.html",
   styleUrls: ["./missions.page.scss"]
 })
 export class MissionsPage implements OnInit {
-  pages = [
-    { title: "Dashboard", url: "missions" },
-    { title: "Photos", url: "photos" },
-    { title: "Details", url: "details" }
-  ];
+  films: any;
 
-  selectedPath = "";
+  constructor(private moviesService: MoviesService) {
+    this.films = [];
+  }
 
-  constructor(private router: Router) {
-    this.router.events.subscribe((event: RouterEvent) => {
-      this.selectedPath = event.url;
+  ngOnInit() {
+    this.getMovies();
+  }
+
+  // Call our service function which returns an Observable
+  getMovies() {
+    this.moviesService.getData().subscribe(response => {
+      let films_Array = response.results.map(f => f);
+      console.log(films_Array);
+      this.films = films_Array;
     });
   }
-  ngOnInit() {}
 }

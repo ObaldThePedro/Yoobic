@@ -9,7 +9,7 @@ const routes: Routes = [
     component: SignupPage,
     children: [
       {
-        path: "missions",
+        path: "menu/missions",
         loadChildren: "../missions/missions.module#MissionsPageModule"
       }
     ]

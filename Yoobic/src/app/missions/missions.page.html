@@ -30,15 +30,17 @@
     </ion-row>
   </ion-grid>
 
-  <ion-card>
-    <img src="./madison.jpg" />
-    <ion-card-header>
-      <ion-card-subtitle>Destination</ion-card-subtitle>
-      <ion-card-title>Madison, WI</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin
-      Territory in 1836.
-    </ion-card-content>
-  </ion-card>
+  <ion-grid>
+    <ion-card *ngFor="let item of films" [routerLink]="['/menu', 'movie', item.episode_id]"
+      routerLinkActive="router-link-active">
+      <img src="download.jpeg" />
+      <ion-card-header>
+        <ion-card-subtitle>Movie</ion-card-subtitle>
+        <ion-card-title>{{item.title}}</ion-card-title>
+      </ion-card-header>
+      <!-- <ion-card-content>
+        {{item.opening_crawl}}
+      </ion-card-content> -->
+    </ion-card>
+  </ion-grid>
 </ion-content>
