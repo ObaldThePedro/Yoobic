@@ -1,13 +1,12 @@
-import { MoviesService } from "../services/movies.service";
 import { Component, OnInit } from "@angular/core";
-import { Observable } from "rxjs";
+import { MoviesService } from "../services/movies.service";
 
 @Component({
   selector: "app-movies",
-  templateUrl: "./missions.page.html",
-  styleUrls: ["./missions.page.scss"]
+  templateUrl: "./movies.page.html",
+  styleUrls: ["./movies.page.scss"]
 })
-export class MissionsPage implements OnInit {
+export class MoviesPage implements OnInit {
   films: any;
 
   constructor(private moviesService: MoviesService) {
@@ -21,9 +20,9 @@ export class MissionsPage implements OnInit {
   // Call our service function which returns an Observable
   getMovies() {
     this.moviesService.getData().subscribe(response => {
-      let films_Array = response.results.map(f => f);
-      console.log(films_Array);
-      this.films = films_Array;
+      const filmsArray = response.results.map(f => f);
+      console.log(filmsArray);
+      this.films = filmsArray;
     });
   }
 }

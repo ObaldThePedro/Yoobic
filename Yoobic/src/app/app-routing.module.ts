@@ -23,6 +23,10 @@ const routes: Routes = [
       import("./movie-details/movie-details.module").then(
         m => m.MovieDetailsPageModule
       )
+  },
+  {
+    path: 'movies',
+    loadChildren: () => import('./movies/movies.module').then( m => m.MoviesPageModule)
   }
 ];
 
