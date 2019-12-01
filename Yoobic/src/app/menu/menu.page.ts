@@ -8,7 +8,7 @@ import { Router, RouterEvent } from "@angular/router";
 })
 export class MenuPage implements OnInit {
   pages = [
-    { title: "Movies", url: "/menu/missions" },
+    { title: "Movies", url: "/menu/movies" },
     { title: "Characters", url: "menu/photos" },
     { title: "Planets", url: "menu/details" }
   ];
